@@ -38,6 +38,8 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
+        usernameTF.text = ""
+        passwordTF.text = ""
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
