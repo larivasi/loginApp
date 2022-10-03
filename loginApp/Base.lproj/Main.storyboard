@@ -31,16 +31,6 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWy-Zg-gsb">
-                                <rect key="frame" x="60.5" y="198" width="199" height="28.5"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Forgot username or password?">
-                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleCaption1"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="forgotUsernamePassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X5s-y9-VWO"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhw-fH-SGf">
                                 <rect key="frame" x="16" y="132" width="288" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -60,18 +50,44 @@
                                     <segue destination="JUr-Q4-AAw" kind="presentation" modalPresentationStyle="fullScreen" id="a16-Ww-JVa"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9H0-jy-W18">
+                                <rect key="frame" x="16" y="198" width="288" height="28.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWy-Zg-gsb">
+                                        <rect key="frame" x="0.0" y="0.0" width="144" height="28.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Forgot username?">
+                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleCaption1"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="forgotUsername:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ved-kf-b2L"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hK-PV-z3U" userLabel="Forgot password?">
+                                        <rect key="frame" x="144" y="0.0" width="144" height="28.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Forgot password?">
+                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleCaption1"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="forgotPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D3l-t8-qj0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fhw-fH-SGf" firstAttribute="top" secondItem="ALL-e8-s21" secondAttribute="bottom" constant="16" id="3Xe-k2-lZQ"/>
+                            <constraint firstItem="9H0-jy-W18" firstAttribute="top" secondItem="fhw-fH-SGf" secondAttribute="bottom" constant="16" id="FNp-Uy-5sw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9H0-jy-W18" secondAttribute="trailing" constant="16" id="JY8-eg-huf"/>
+                            <constraint firstItem="9H0-jy-W18" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="MAm-mn-PoZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fhw-fH-SGf" secondAttribute="trailing" constant="16" id="RKc-9i-cbk"/>
                             <constraint firstItem="ALL-e8-s21" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="XNz-gj-2pC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ALL-e8-s21" secondAttribute="trailing" constant="16" id="ZTq-ba-VAQ"/>
                             <constraint firstItem="ALL-e8-s21" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="lKh-l1-9qE"/>
-                            <constraint firstItem="BWy-Zg-gsb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oe3-1R-O3Y"/>
                             <constraint firstItem="fhw-fH-SGf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="pW7-gr-4WN"/>
-                            <constraint firstItem="BWy-Zg-gsb" firstAttribute="top" secondItem="fhw-fH-SGf" secondAttribute="bottom" constant="16" id="tmf-P9-kOh"/>
                         </constraints>
                     </view>
                     <connections>
