@@ -75,7 +75,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="loginButton" destination="fhw-fH-SGf" id="y30-ht-086"/>
                         <outlet property="passwordTF" destination="JEo-1e-Fnk" id="iY4-GY-3n2"/>
                         <outlet property="usernameTF" destination="EkE-kK-ce5" id="PZu-nM-w40"/>
                     </connections>
@@ -87,8 +86,6 @@
         <!--Welcome Screen View Controller-->
         <scene sceneID="2gW-GZ-SQe">
             <objects>
-                <exit id="vrU-BY-ezP" userLabel="Exit" sceneMemberID="exit"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WPc-d0-VEo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="JUr-Q4-AAw" customClass="WelcomeScreenViewController" customModule="loginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ffa-w2-iAs" customClass="GradientUIView" customModule="loginApp" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -135,6 +132,8 @@
                         <outlet property="welcomeLabel" destination="8I8-RE-gAr" id="WEG-hK-GcV"/>
                     </connections>
                 </viewController>
+                <exit id="vrU-BY-ezP" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WPc-d0-VEo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="949" y="3"/>
         </scene>
