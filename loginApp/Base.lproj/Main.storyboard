@@ -73,6 +73,10 @@
                             <constraint firstItem="BWy-Zg-gsb" firstAttribute="top" secondItem="fhw-fH-SGf" secondAttribute="bottom" constant="16" id="tmf-P9-kOh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordTF" destination="JEo-1e-Fnk" id="iY4-GY-3n2"/>
+                        <outlet property="usernameTF" destination="EkE-kK-ce5" id="PZu-nM-w40"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -126,6 +130,7 @@
                     </view>
                     <connections>
                         <outlet property="logoutButton" destination="Ft2-Oa-mau" id="t4H-Zl-vhp"/>
+                        <outlet property="welcomeLabel" destination="8I8-RE-gAr" id="WEG-hK-GcV"/>
                     </connections>
                 </viewController>
             </objects>

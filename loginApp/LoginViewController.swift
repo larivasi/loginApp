@@ -9,9 +9,17 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet weak var usernameTF: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let welcomeVC = segue.destination as? WelcomeScreenViewController else { return }
+        welcomeVC.username = usernameTF.text
     }
     
     
@@ -31,13 +39,19 @@ class LoginViewController: UIViewController {
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
     }
-
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-    let touch = touches.first
-        if touch?.phase == UITouch.Phase.began {
-        touch?.view?.endEditing(true)
-    }
-}
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch = touches.first
+        if touch?.phase == UITouch.Phase.began {
+            touch?.view?.endEditing(true)
+        }
+    }
+    
+    
+//    @IBAction func loginButton() {
+//        if usernameTF == "User" && passwordTF == "Pass" {
+//
+//        }
+//    }
 }
 
