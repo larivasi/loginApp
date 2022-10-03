@@ -9,8 +9,8 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    let username = "User"
-    let password = "pass"
+    let loginName = "Tim"
+    let loginPassword = "123"
     
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var usernameTF: UITextField!
@@ -20,18 +20,18 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotUsername(_ sender: Any) {
-        showAlert(withTitle: "Oooops!", withMessage: "Username: \(username)")
+        showAlert(withTitle: "Oooops!", withMessage: "Username: \(loginName)")
         
     }
     
     @IBAction func forgotPassword(_ sender: Any) {
-        showAlert(withTitle: "Oooops!", withMessage: "Password: \(password)")
+        showAlert(withTitle: "Oooops!", withMessage: "Password: \(loginPassword)")
     }
     
     
     @IBAction func loginButtonDidTapped() {
         guard let userName = usernameTF.text, let password = passwordTF.text else { return }
-        if userName != username || password != password {
+        if userName != loginName || password != loginPassword {
             showAlert(withTitle: "Incorrect login or password", withMessage: "Please make sure that you enter")
             passwordTF.text = ""
         }
