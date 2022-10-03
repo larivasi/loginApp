@@ -58,10 +58,10 @@ extension LoginViewController {
     private func showAlert(withTitle title: String, withMessage message: String) {
         let alert = UIAlertController(title: title, message: message,
                                       preferredStyle: .alert)
-        passwordTF.text?.removeAll()
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
             NSLog("The \"OK\" alert occured.")
         }))
         self.present(alert, animated: true, completion: nil)
+        passwordTF.text?.removeAll()
     }
 }
