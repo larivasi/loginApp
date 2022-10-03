@@ -28,7 +28,16 @@ class LoginViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    
     @IBAction func unwind(for segue: UIStoryboardSegue) {
     }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    let touch = touches.first
+        if touch?.phase == UITouch.Phase.began {
+        touch?.view?.endEditing(true)
+    }
+}
+    
 }
 
