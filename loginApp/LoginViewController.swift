@@ -54,8 +54,11 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController {
     private func showAlert(withTitle title: String, withMessage message: String) {
-        let alert = UIAlertController(title: title, message: message,
-                                      preferredStyle: .alert)
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
             NSLog("The \"OK\" alert occured.")
         }))
