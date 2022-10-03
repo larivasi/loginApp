@@ -33,7 +33,6 @@ class LoginViewController: UIViewController {
         guard let userName = usernameTF.text, let password = passwordTF.text else { return }
         if userName != loginName || password != loginPassword {
             showAlert(withTitle: "Incorrect login or password", withMessage: "Please make sure that you enter")
-            passwordTF.text?.removeAll()
         }
     }
     
@@ -59,6 +58,7 @@ extension LoginViewController {
     private func showAlert(withTitle title: String, withMessage message: String) {
         let alert = UIAlertController(title: title, message: message,
                                       preferredStyle: .alert)
+        passwordTF.text?.removeAll()
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
             NSLog("The \"OK\" alert occured.")
         }))
