@@ -27,7 +27,6 @@ class LoginViewController: UIViewController {
             showAlert(withTitle: "Incorrect login or password", withMessage: "Please make sure that you enter")
             passwordTF.text = ""
         }
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -46,7 +45,6 @@ class LoginViewController: UIViewController {
             touch?.view?.endEditing(true)
         }
     }
-    
 }
 
 extension LoginViewController {
