@@ -11,10 +11,10 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var usernameTF: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -24,16 +24,8 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func forgotUsernamePassword(_ sender: Any) {
-        let alert = UIAlertController(title: "Oooops 😬",
-                                      message: """
-                                      Username: User
-                                      Password: Pass
-                                      """,
-                                      preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
-            NSLog("The \"OK\" alert occured.")
-        }))
-        self.present(alert, animated: true, completion: nil)
+        showAlert(withTitle: "Oooops!", withMessage: "Username: User \nPassword: Pass")
+      
     }
     
     
@@ -50,10 +42,24 @@ class LoginViewController: UIViewController {
     }
     
     
-//    @IBAction func loginButton() {
-//        if usernameTF == "User" && passwordTF == "Pass" {
-//
-//        }
-//    }
+
+    @IBAction func loginButtonDidTapped() {
+        guard let userName = usernameTF.text, let password = passwordTF.text else { return }
+        if userName != "User" || password != "Pass" {
+            showAlert(withTitle: "Incorrect login or password", withMessage: "Please make sure that you enter")
+            passwordTF.text = ""
+        }
+        
+    }
 }
 
+extension LoginViewController {
+    private func showAlert(withTitle title: String, withMessage message: String) {
+        let alert = UIAlertController(title: title, message: message,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+}
