@@ -33,7 +33,7 @@ class LoginViewController: UIViewController {
         guard let userName = usernameTF.text, let password = passwordTF.text else { return }
         if userName != loginName || password != loginPassword {
             showAlert(withTitle: "Incorrect login or password", withMessage: "Please make sure that you enter")
-            passwordTF.text = ""
+            passwordTF.text?.removeAll()
         }
     }
     
