@@ -21,13 +21,11 @@ class LoginViewController: UIViewController {
     
     @IBAction func forgotUsername(_ sender: Any) {
         showAlert(withTitle: "Oooops!", withMessage: "Username: \(loginName)")
-        
     }
     
     @IBAction func forgotPassword(_ sender: Any) {
         showAlert(withTitle: "Oooops!", withMessage: "Password: \(loginPassword)")
     }
-    
     
     @IBAction func loginButtonDidTapped() {
         guard let userName = usernameTF.text, let password = passwordTF.text else { return }
