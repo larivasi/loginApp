@@ -12,6 +12,7 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         generateTabBar()
+        setTabBarAppearance()
     }
     
     private func generateTabBar() {

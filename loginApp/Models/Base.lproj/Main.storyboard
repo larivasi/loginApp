@@ -93,12 +93,12 @@
                     <connections>
                         <outlet property="passwordTF" destination="JEo-1e-Fnk" id="iY4-GY-3n2"/>
                         <outlet property="usernameTF" destination="EkE-kK-ce5" id="PZu-nM-w40"/>
-                        <segue destination="JUr-Q4-AAw" kind="presentation" identifier="showWelcomeScreenVC" modalPresentationStyle="fullScreen" id="e1A-Hr-Vyv"/>
+                        <segue destination="eTn-ud-RTx" kind="presentation" identifier="showWelcomeScreenVC" modalPresentationStyle="fullScreen" id="HFz-q5-L7I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1059" y="2"/>
+            <point key="canvasLocation" x="919" y="343"/>
         </scene>
         <!--Item-->
         <scene sceneID="2gW-GZ-SQe">
@@ -109,7 +109,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Blw-0e-U2y">
-                                <rect key="frame" x="16" y="241.5" width="288" height="85.5"/>
+                                <rect key="frame" x="16" y="217" width="288" height="85.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, 👋" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8I8-RE-gAr">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="20.5"/>
@@ -155,7 +155,53 @@
                 <exit id="vrU-BY-ezP" userLabel="Exit" sceneMemberID="exit"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WPc-d0-VEo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1946.25" y="2.112676056338028"/>
+            <point key="canvasLocation" x="2895" y="0.0"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="kXo-l2-5uP">
+            <objects>
+                <viewController id="1Nd-iN-fWz" customClass="ProfileViewController" customModule="loginApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TwG-Mb-Esm" customClass="GradientUIView" customModule="loginApp" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXO-AJ-gpW">
+                                <rect key="frame" x="122" y="242.5" width="76" height="34"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2an-rd-Qti"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BXO-AJ-gpW" firstAttribute="centerX" secondItem="2an-rd-Qti" secondAttribute="centerX" id="0V5-wG-EPC"/>
+                            <constraint firstItem="BXO-AJ-gpW" firstAttribute="centerY" secondItem="2an-rd-Qti" secondAttribute="centerY" id="Mmp-Pi-6BA"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="VDC-Ct-kj2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2uH-Wb-uN1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2898.75" y="686.61971830985919"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="no2-Te-zve">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="eTn-ud-RTx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="APQ-r0-c5N">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <tabBarAppearance key="standardAppearance"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="JUr-Q4-AAw" kind="relationship" relationship="viewControllers" id="dEz-LJ-GCd"/>
+                        <segue destination="1Nd-iN-fWz" kind="relationship" relationship="viewControllers" id="PiO-3L-x1C"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xdM-2b-u07" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1897.5" y="343.3098591549296"/>
         </scene>
     </scenes>
     <resources>
