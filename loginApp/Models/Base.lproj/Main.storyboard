@@ -100,10 +100,10 @@
             </objects>
             <point key="canvasLocation" x="919" y="343"/>
         </scene>
-        <!--Item-->
+        <!--Main-->
         <scene sceneID="2gW-GZ-SQe">
             <objects>
-                <viewController id="JUr-Q4-AAw" customClass="WelcomeScreenViewController" customModule="loginApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="welcomeVC" id="JUr-Q4-AAw" customClass="WelcomeScreenViewController" customModule="loginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ffa-w2-iAs" customClass="GradientUIView" customModule="loginApp" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -147,7 +147,7 @@
                             <constraint firstItem="POY-Nb-EKz" firstAttribute="trailing" secondItem="Blw-0e-U2y" secondAttribute="trailing" constant="16" id="kTc-2u-Dgw"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="jpP-6u-JIC"/>
+                    <tabBarItem key="tabBarItem" title="Main" image="house.circle.fill" catalog="system" id="jpP-6u-JIC"/>
                     <connections>
                         <outlet property="welcomeLabel" destination="8I8-RE-gAr" id="WEG-hK-GcV"/>
                     </connections>
@@ -157,17 +157,29 @@
             </objects>
             <point key="canvasLocation" x="2895" y="0.0"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="kXo-l2-5uP">
             <objects>
                 <viewController id="1Nd-iN-fWz" customClass="ProfileViewController" customModule="loginApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TwG-Mb-Esm" customClass="GradientUIView" customModule="loginApp" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="TwG-Mb-Esm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXO-AJ-gpW">
-                                <rect key="frame" x="122" y="242.5" width="76" height="34"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DGF-ND-BIn">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="139"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="x3K-eE-EVf">
+                                <rect key="frame" x="104.5" y="86.5" width="111" height="110"/>
+                                <color key="tintColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="111" id="MrU-fa-677"/>
+                                    <constraint firstAttribute="height" constant="111" id="tgz-2U-8rV"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добрый день, пользователь!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZ5-xe-cjK">
+                                <rect key="frame" x="46" y="205" width="228" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -175,11 +187,22 @@
                         <viewLayoutGuide key="safeArea" id="2an-rd-Qti"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="BXO-AJ-gpW" firstAttribute="centerX" secondItem="2an-rd-Qti" secondAttribute="centerX" id="0V5-wG-EPC"/>
-                            <constraint firstItem="BXO-AJ-gpW" firstAttribute="centerY" secondItem="2an-rd-Qti" secondAttribute="centerY" id="Mmp-Pi-6BA"/>
+                            <constraint firstItem="x3K-eE-EVf" firstAttribute="centerX" secondItem="2an-rd-Qti" secondAttribute="centerX" id="6ev-6z-LYf"/>
+                            <constraint firstItem="DGF-ND-BIn" firstAttribute="top" secondItem="TwG-Mb-Esm" secondAttribute="top" id="9oL-t5-T7L"/>
+                            <constraint firstItem="x3K-eE-EVf" firstAttribute="top" secondItem="2an-rd-Qti" secondAttribute="top" constant="86" id="Grv-17-u12"/>
+                            <constraint firstItem="BZ5-xe-cjK" firstAttribute="centerX" secondItem="2an-rd-Qti" secondAttribute="centerX" id="JdZ-q8-OQG"/>
+                            <constraint firstAttribute="trailing" secondItem="DGF-ND-BIn" secondAttribute="trailing" id="Shc-5Y-PYB"/>
+                            <constraint firstItem="DGF-ND-BIn" firstAttribute="leading" secondItem="TwG-Mb-Esm" secondAttribute="leading" id="V3e-z7-mkC"/>
+                            <constraint firstItem="x3K-eE-EVf" firstAttribute="top" secondItem="DGF-ND-BIn" secondAttribute="bottom" constant="-53" id="eVc-YT-eRb"/>
+                            <constraint firstItem="BZ5-xe-cjK" firstAttribute="top" secondItem="x3K-eE-EVf" secondAttribute="bottom" constant="8" symbolic="YES" id="yBU-hJ-ui6"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="VDC-Ct-kj2"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle.fill" catalog="system" id="VDC-Ct-kj2"/>
+                    <connections>
+                        <outlet property="greetingText" destination="BZ5-xe-cjK" id="Zon-7p-eSJ"/>
+                        <outlet property="profilePic" destination="x3K-eE-EVf" id="faZ-x4-1hb"/>
+                        <outlet property="upperBackground" destination="DGF-ND-BIn" id="418-tb-KcD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2uH-Wb-uN1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -191,6 +214,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="eTn-ud-RTx" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="APQ-r0-c5N">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <tabBarAppearance key="standardAppearance"/>
                     </tabBar>
@@ -205,8 +229,17 @@
         </scene>
     </scenes>
     <resources>
+        <image name="house.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

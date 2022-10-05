@@ -11,11 +11,11 @@ class WelcomeScreenViewController: UIViewController {
 
     @IBOutlet weak var welcomeLabel: UILabel!
     
-    var username: String!
+    var username: String?
     
     override func viewDidLoad() {
-//        super.viewDidLoad()
-//        welcomeLabel.text = "Hello, " + username + "! 👋"
+        super.viewDidLoad()
+        welcomeLabel.text = "Hello," + (username ?? " unknown")
         
     }
     

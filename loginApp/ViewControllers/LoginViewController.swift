@@ -17,8 +17,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        usernameTF.text = "Tim"
-        passwordTF.text = "123"
+        usernameTF.text = loginName
+        passwordTF.text = loginPassword
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -28,7 +28,10 @@ class LoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeScreenViewController else { return }
-        welcomeVC.username = usernameTF.text
+        welcomeVC.username = loginName
+        
+        guard let profileVC = segue.destination as? ProfileViewController else { return }
+        profileVC.username = loginName
     }
     
     @IBAction func forgotUsernameOrPassword(_ sender: UIButton) {
