@@ -8,6 +8,8 @@
 import UIKit
 
 class WelcomeScreenViewController: UIViewController {
+    
+    private let userInfo = User.userInfo()
 
     @IBOutlet weak var welcomeLabel: UILabel!
     
@@ -15,8 +17,7 @@ class WelcomeScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeLabel.text = "Hello," + (username ?? " unknown")
-        
+        welcomeLabel.text = "Hello, " + userInfo.firstName
     }
     
 }

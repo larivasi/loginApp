@@ -9,16 +9,16 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    private let userInfo = User.userInfo()
+    
+    
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var usernameTF: UITextField!
     
-    private let loginName = "Tim"
-    private let loginPassword = "123"
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        usernameTF.text = loginName
-        passwordTF.text = loginPassword
+        usernameTF.text = userInfo.username
+        passwordTF.text = userInfo.password
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -26,23 +26,21 @@ class LoginViewController: UIViewController {
         view.endEditing(true)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeScreenViewController else { return }
-        welcomeVC.username = loginName
-        
-        guard let profileVC = segue.destination as? ProfileViewController else { return }
-        profileVC.username = loginName
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let welcomeVC = segue.destination as? WelcomeScreenViewController else { return }
+//        welcomeVC.username = userInfo.username
+//        
+//    }
     
     @IBAction func forgotUsernameOrPassword(_ sender: UIButton) {
         sender.tag == 0
-        ?  showAlert(withTitle: "Oooops!", withMessage: "Username: \(loginName)")
-        :  showAlert(withTitle: "Oooops!", withMessage: "Password: \(loginPassword)")
+        ?  showAlert(withTitle: "Oooops!", withMessage: "Username: \(userInfo.username)")
+        :  showAlert(withTitle: "Oooops!", withMessage: "Password: \(userInfo.password)")
        
     }
     
     @IBAction func loginButtonDidTapped() {
-        guard usernameTF.text == loginName, passwordTF.text == loginPassword else {
+        guard usernameTF.text == userInfo.username, passwordTF.text == userInfo.password else {
             showAlert(
                 withTitle: "Invalid login or password",
                 withMessage: "Please, enter correct login or password",

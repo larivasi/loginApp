@@ -9,6 +9,8 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    private let userInfo = User.userInfo()
+    
     var username: String?
     
     @IBOutlet weak var upperBackground: UIView!
@@ -18,7 +20,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        greetingText.text = greetingLogic() + (username ?? "unknown")
+        greetingText.text = greetingLogic() + userInfo.firstName
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -34,31 +36,30 @@ class ProfileViewController: UIViewController {
         profilePic.layer.shadowOpacity = 0.7
         profilePic.layer.shadowOffset =  CGSize(width: 2, height: 2)
         profilePic.layer.shadowRadius = 10
-        profilePic.loadFrom(URLAddress: "https://i.postimg.cc/FRXHsSt2/Ellipse-1.png")
+        profilePic.loadFrom(URLAddress: userInfo.profilePic)
         profilePic.alpha = 1
     }
     
     func greetingLogic() -> String {
-      let hour = Calendar.current.component(.hour, from: Date())
-      
-      let midNight = 0
-      let morning = 4
-      let midDay = 12
-      let evening = 18
-      
-      var greetingText = "Hello" // Default greeting text
-      switch hour {
-      case midNight ..< morning:
-          greetingText = "Доброй ночи, "
-      case morning..<midDay:
-          greetingText = "Доброе утро, "
-      case midDay..<evening:
-          greetingText = "Добрый день, "
-      default:
-          _ = "Добрый вечер, "
-      }
-      
-      return greetingText
+        let hour = Calendar.current.component(.hour, from: Date())
+        
+        let midNight = 0
+        let morning = 4
+        let midDay = 12
+        let evening = 18
+        
+        var greetingText = "Привет"
+        switch hour {
+        case midNight ..< morning:
+            greetingText = "Доброй ночи, "
+        case morning ..< midDay:
+            greetingText = "Доброе утро, "
+        case midDay ..< evening:
+            greetingText = "Добрый день, "
+        default:
+            _ = "Добрый вечер, "
+        }
+        return greetingText
     }
 }
 
