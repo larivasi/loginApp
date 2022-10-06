@@ -17,6 +17,7 @@
 		B169ED3328EA26F100BFC34F /* GradientUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B169ED3228EA26F100BFC34F /* GradientUIView.swift */; };
 		B1DC5E2C28ECAE7300BFE4F7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC5E2B28ECAE7300BFE4F7 /* ProfileViewController.swift */; };
 		B1DC5E2E28EEA51300BFE4F7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC5E2D28EEA51300BFE4F7 /* User.swift */; };
+		B1DC5E3128EEBEB100BFE4F7 /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC5E3028EEBEB100BFE4F7 /* BioViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B169ED3228EA26F100BFC34F /* GradientUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientUIView.swift; sourceTree = "<group>"; };
 		B1DC5E2B28ECAE7300BFE4F7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B1DC5E2D28EEA51300BFE4F7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B1DC5E3028EEBEB100BFE4F7 /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				B169ED2028EA1A2200BFC34F /* LoginViewController.swift */,
 				B169ED3028EA218300BFC34F /* WelcomeScreenViewController.swift */,
 				B1DC5E2B28ECAE7300BFE4F7 /* ProfileViewController.swift */,
+				B1DC5E3028EEBEB100BFE4F7 /* BioViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				B169ED2128EA1A2200BFC34F /* LoginViewController.swift in Sources */,
 				B1DC5E2E28EEA51300BFE4F7 /* User.swift in Sources */,
 				B169ED3128EA218300BFC34F /* WelcomeScreenViewController.swift in Sources */,
+				B1DC5E3128EEBEB100BFE4F7 /* BioViewController.swift in Sources */,
 				B169ED1D28EA1A2200BFC34F /* AppDelegate.swift in Sources */,
 				B169ED1F28EA1A2200BFC34F /* SceneDelegate.swift in Sources */,
 				B1DC5E2C28ECAE7300BFE4F7 /* ProfileViewController.swift in Sources */,

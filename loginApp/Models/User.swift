@@ -1,5 +1,5 @@
 //
-//  Question.swift
+//  User.swift
 //  loginApp
 //
 //  Created by Ларин Василий on 06.10.2022.
@@ -20,6 +20,31 @@ struct User {
     }
 }
 
-struct Cards {
+struct Bio {
+    let birthDate: String
+    let birthPlace: String
+    let specialSigns: String
+    let lifeStory: String
+    
+    static func bioDetails() -> Bio {
+        Bio(birthDate: "18.05.1998",
+            birthPlace: "Berlin",
+            specialSigns: "Tatto on left wrist",
+            lifeStory: "Something intresting about me"
+        )
+    }
 
+}
+
+struct PersonalInfo {
+    let work: String
+    let position: String
+    let hobby: String
+    
+    static func personalInfo() -> PersonalInfo {
+        PersonalInfo(work: "Hard",
+                     position: "Middle",
+                     hobby: "Learn how to code"
+        )
+    }
 }

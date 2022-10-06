@@ -10,6 +10,7 @@ import UIKit
 class ProfileViewController: UIViewController {
     
     private let userInfo = User.userInfo()
+    private let personalInfo = PersonalInfo.personalInfo()
     
     var username: String?
     
@@ -17,9 +18,16 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var navigatroTitle: UINavigationItem!
     
+    @IBOutlet weak var hobby: UILabel!
+    @IBOutlet weak var position: UILabel!
+    @IBOutlet weak var work: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigatroTitle.title = greetingLogic() + userInfo.firstName
+        hobby.text = "Hobby: " + personalInfo.hobby
+        position.text = "Position: " + personalInfo.position
+        work.text = "Job: " + personalInfo.work
     }
     
     override func viewDidAppear(_ animated: Bool) {
