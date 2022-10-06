@@ -9,18 +9,17 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
-    private let userInfo = User.userInfo()
-    private let personalInfo = PersonalInfo.personalInfo()
-    
-    var username: String?
-    
-    @IBOutlet weak var upperBackground: UIView!
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var navigatroTitle: UINavigationItem!
     
     @IBOutlet weak var hobby: UILabel!
     @IBOutlet weak var position: UILabel!
     @IBOutlet weak var work: UILabel!
+    
+    var username: String?
+    
+    private let userInfo = User.userInfo()
+    private let personalInfo = PersonalInfo.personalInfo()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +46,7 @@ class ProfileViewController: UIViewController {
         profilePic.alpha = 1
     }
     
-    func greetingLogic() -> String {
+    private func greetingLogic() -> String {
         let hour = Calendar.current.component(.hour, from: Date())
         
         let midNight = 0

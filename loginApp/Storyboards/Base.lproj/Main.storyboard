@@ -104,7 +104,7 @@
         <scene sceneID="2gW-GZ-SQe">
             <objects>
                 <viewController storyboardIdentifier="welcomeVC" id="JUr-Q4-AAw" customClass="WelcomeScreenViewController" customModule="loginApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ffa-w2-iAs" customClass="GradientUIView" customModule="loginApp" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="ffa-w2-iAs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -127,7 +127,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, 👋" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8I8-RE-gAr">
-                                <rect key="frame" x="108.5" y="274" width="103" height="20.5"/>
+                                <rect key="frame" x="108.5" y="273.5" width="103" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -238,7 +238,6 @@
                         <outlet property="navigatroTitle" destination="JjB-r8-Ggg" id="2cy-JG-nvF"/>
                         <outlet property="position" destination="Md8-XH-hu7" id="nwl-EQ-XYv"/>
                         <outlet property="profilePic" destination="x3K-eE-EVf" id="faZ-x4-1hb"/>
-                        <outlet property="upperBackground" destination="DGF-ND-BIn" id="418-tb-KcD"/>
                         <outlet property="work" destination="7B6-3g-eFs" id="At0-VH-ATR"/>
                     </connections>
                 </viewController>
@@ -275,7 +274,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydD-ek-AHZ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydD-ek-AHZ">
                                         <rect key="frame" x="0.0" y="109.5" width="41.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -288,6 +287,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xT6-P7-wih" firstAttribute="centerY" secondItem="CBr-H7-Wu7" secondAttribute="centerY" id="9VL-P0-Z8B"/>
+                            <constraint firstItem="xT6-P7-wih" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hdc-vy-f0c" secondAttribute="leading" constant="16" id="SE3-GU-9u5"/>
                             <constraint firstItem="xT6-P7-wih" firstAttribute="centerX" secondItem="CBr-H7-Wu7" secondAttribute="centerX" id="ST9-6H-P1J"/>
                         </constraints>
                     </view>
@@ -308,7 +308,7 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="eTn-ud-RTx" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="APQ-r0-c5N">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="APQ-r0-c5N" customClass="TabBar">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -331,7 +331,7 @@
                     <tabBarItem key="tabBarItem" title="Profile" image="person.circle.fill" catalog="system" id="VDC-Ct-kj2"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2F0-te-PVm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

@@ -11,7 +11,6 @@ class LoginViewController: UIViewController {
     
     private let userInfo = User.userInfo()
     
-    
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var usernameTF: UITextField!
     
@@ -26,17 +25,11 @@ class LoginViewController: UIViewController {
         view.endEditing(true)
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let welcomeVC = segue.destination as? WelcomeScreenViewController else { return }
-//        welcomeVC.username = userInfo.username
-//        
-//    }
-    
     @IBAction func forgotUsernameOrPassword(_ sender: UIButton) {
         sender.tag == 0
         ?  showAlert(withTitle: "Oooops!", withMessage: "Username: \(userInfo.username)")
         :  showAlert(withTitle: "Oooops!", withMessage: "Password: \(userInfo.password)")
-       
+        
     }
     
     @IBAction func loginButtonDidTapped() {
