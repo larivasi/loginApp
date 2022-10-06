@@ -15,12 +15,11 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var upperBackground: UIView!
     @IBOutlet weak var profilePic: UIImageView!
-    
-    @IBOutlet weak var greetingText: UILabel!
+    @IBOutlet weak var navigatroTitle: UINavigationItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        greetingText.text = greetingLogic() + userInfo.firstName
+        navigatroTitle.title = greetingLogic() + userInfo.firstName
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -12,7 +12,11 @@ struct User {
     let profilePic: String
     
     static func userInfo() -> User {
-        User(username: "Tim", password: "123", firstName: "Markus", profilePic: "https://i.postimg.cc/FRXHsSt2/Ellipse-1.png" )
+        User(username: "Tim",
+             password: "123",
+             firstName: "Markus",
+             profilePic: "https://i.postimg.cc/FRXHsSt2/Ellipse-1.png"
+        )
     }
 }
 
