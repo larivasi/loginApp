@@ -14,7 +14,6 @@
 		B169ED2628EA1A2200BFC34F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B169ED2528EA1A2200BFC34F /* Assets.xcassets */; };
 		B169ED2928EA1A2200BFC34F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B169ED2728EA1A2200BFC34F /* LaunchScreen.storyboard */; };
 		B169ED3128EA218300BFC34F /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B169ED3028EA218300BFC34F /* WelcomeScreenViewController.swift */; };
-		B169ED3328EA26F100BFC34F /* GradientUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B169ED3228EA26F100BFC34F /* GradientUIView.swift */; };
 		B1DC5E2C28ECAE7300BFE4F7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC5E2B28ECAE7300BFE4F7 /* ProfileViewController.swift */; };
 		B1DC5E2E28EEA51300BFE4F7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC5E2D28EEA51300BFE4F7 /* User.swift */; };
 		B1DC5E3128EEBEB100BFE4F7 /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC5E3028EEBEB100BFE4F7 /* BioViewController.swift */; };
@@ -30,7 +29,6 @@
 		B169ED2828EA1A2200BFC34F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B169ED2A28EA1A2200BFC34F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B169ED3028EA218300BFC34F /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
-		B169ED3228EA26F100BFC34F /* GradientUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientUIView.swift; sourceTree = "<group>"; };
 		B1DC5E2B28ECAE7300BFE4F7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B1DC5E2D28EEA51300BFE4F7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B1DC5E3028EEBEB100BFE4F7 /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
@@ -70,7 +68,6 @@
 				B169ED3528EC671800BFC34F /* ViewControllers */,
 				B1DC5E2F28EEA53C00BFE4F7 /* Models */,
 				B169ED3628EC673300BFC34F /* Storyboards */,
-				B169ED3228EA26F100BFC34F /* GradientUIView.swift */,
 				B169ED2528EA1A2200BFC34F /* Assets.xcassets */,
 			);
 			path = loginApp;
@@ -192,7 +189,6 @@
 				B169ED1D28EA1A2200BFC34F /* AppDelegate.swift in Sources */,
 				B169ED1F28EA1A2200BFC34F /* SceneDelegate.swift in Sources */,
 				B1DC5E2C28ECAE7300BFE4F7 /* ProfileViewController.swift in Sources */,
-				B169ED3328EA26F100BFC34F /* GradientUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
