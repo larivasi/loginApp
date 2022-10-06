@@ -9,10 +9,10 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    private let userInfo = User.userInfo()
-    
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var usernameTF: UITextField!
+    
+    private let userInfo = User.userInfo()
     
     override func viewDidLoad() {
         super.viewDidLoad()
